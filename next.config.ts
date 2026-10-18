@@ -5,6 +5,15 @@ const nextConfig: NextConfig = {
   experimental: {
     agentFeedback: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "image.tmdb.org",
+        pathname: "/t/p/**",
+      },
+    ],
+  },
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {
